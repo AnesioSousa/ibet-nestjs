@@ -50,10 +50,6 @@ jobs:
       - name: Set environment variables
         run: echo "DATABASE_URL=postgres://test_user:test_password@localhost:5432/test_db" >> $GITHUB_ENV
 
-      # Executar migrações do TypeORM
-      - name: Run TypeORM migrations
-        run: yarn typeorm migration:run
-
       # Construir o projeto
       - name: Build project
         run: yarn build
